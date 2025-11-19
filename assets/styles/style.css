@@ -32,3 +32,15 @@ button {
     border: 0;
     background-color: white;
 }
+
+@media (max-width: 768px) {
+
+    #diviv {
+        width: 300px;
+        height: 300px;
+    }
+    #diviv>* {
+    width: 100px;
+    height: 100px;
+    }
+}
