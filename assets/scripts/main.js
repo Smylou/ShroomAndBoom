@@ -17,7 +17,7 @@ function createGrid() {
             a.innerHTML = ""
             let myPic = document.createElement("img")
             myPic.id = "img" + i
-            myPic.src = "./assets/images/" + game.currentPlayer + ".png"
+            myPic.src = "./assets/images/" + game.currentPlayer.toLowerCase() + ".png"
             a.appendChild(myPic)
             changeCase(i)
 
