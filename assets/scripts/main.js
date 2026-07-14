@@ -37,34 +37,41 @@ function getName(id) {
     if (document.getElementById("img" + id) != null) {
         return document.getElementById("img" + id).name
     } else {
-
         return false
     }
-
 }
 
 function verifWin() {
     if (getName(0) == getName(1) && getName(0) == getName(2) && getName(0) != false) {
         titleWin(getName(0))
+        return
     } else if (getName(3) == getName(4) && getName(3) == getName(5) && getName(3) != false) {
         titleWin(getName(3))
+        return
     } else if (getName(6) == getName(7) && getName(6) == getName(8) && getName(6) != false) {
         titleWin(getName(6))
+        return
     }
 
     if (getName(0) == getName(3) && getName(0) == getName(6) && getName(0) != false) {
         titleWin(getName(0))
+        return
     } else if (getName(1) == getName(4) && getName(1) == getName(7) && getName(1) != false) {
         titleWin(getName(1))
+        return
     } else if (getName(2) == getName(5) && getName(2) == getName(8) && getName(2) != false) {
         titleWin(getName(2))
+        return
     }
 
     if (getName(0) == getName(4) && getName(0) == getName(8) && getName(0) != false) {
         titleWin(getName(0))
+        return
     } else if (getName(2) == getName(4) && getName(2) == getName(6) && getName(2) != false) {
         titleWin(getName(2))
+        return
     }
+
     if (getName(0) && getName(1) && getName(2) && getName(3) && getName(4) && getName(5) && getName(6) && getName(7) && getName(8)) {
         document.body.innerHTML = ""
         let myTitle = document.createElement("h1")
@@ -79,19 +86,6 @@ function titleWin(name) {
     myTitle.textContent = name + " a gagné !"
     document.body.appendChild(myTitle)
 }
-
-
-// function verifWin(numCase) {
-//     let myCase = document.getElementById("case" + numCase).firstChild.name
-//     let myCase1 = document.getElementById("case" + (numCase + 1)).firstChild.name
-//     let myCase2 = document.getElementById("case" + (numCase + 2)).firstChild.name
-//     console.log(myCase)
-//     console.log(myCase1)
-//     console.log(myCase2)
-//     if (myCase1 == myCase && myCase2 == myCase) {
-//         console.log("EXPLOSION")
-//     }
-// }
 
 function changeCase(numPic) {
     let myImg = document.getElementById("img" + numPic)
